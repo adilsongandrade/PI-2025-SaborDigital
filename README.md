@@ -1,6 +1,7 @@
 ![FichaTécnicaSaborDigital](https://github.com/user-attachments/assets/e3e956e6-5fb7-4640-84dc-45f3076ef876)
 
 0) Retorna identificação da receita da Ficha Técnica:
+```sql
 SELECT 
 	lif.`id_ficha_tecnica`,
     lif.`nome_receita`,
@@ -13,8 +14,9 @@ JOIN
     categoria_receita cat ON lif.id_categoria = cat.id_categoria
 WHERE
     lif.id_ficha_tecnica = @id_ficha; -- Use a variável @id_ficha ou o ID específico da ficha
+```
 
-1) Consulta ingredientes componentes da receita:
+2) Consulta ingredientes componentes da receita:
 SELECT
     i.descricao_ingrediente AS Ingrediente,
     lif.quantidade AS Quantidade,
@@ -32,7 +34,7 @@ WHERE
 
 
 
-2) Retorna o custo total dos ingredientes componentes da receita
+3) Retorna o custo total dos ingredientes componentes da receita
 SELECT
     SUM(custo_total_item) AS CustoTotalIngredientes
 FROM
@@ -42,7 +44,7 @@ WHERE
 
 
 
-3) Retorna informações nutricionais da receita (** AINDA APRESENTA INCONSISTÊNCIAS **)
+4) Retorna informações nutricionais da receita (** AINDA APRESENTA INCONSISTÊNCIAS **)
 -- Esta consulta funcionará APENAS se as tabelas informacao_nutricional e ingrediente_nutriente
 -- estiverem populadas com dados nutricionais por ingrediente
 SELECT
@@ -69,7 +71,7 @@ GROUP BY
 
 
 
-4) Retorna os equipamentos necessários
+5) Retorna os equipamentos necessários
 SELECT
     e.descricao AS Equipamento,
     lef.quantidade AS Quantidade
@@ -82,7 +84,7 @@ WHERE
 
 
 
-5) Retorna modo de preparo
+6) Retorna modo de preparo
 SELECT
     sequencia AS Passo,
     texto_passo AS Descricao,
