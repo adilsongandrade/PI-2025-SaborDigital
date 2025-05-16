@@ -11,6 +11,8 @@ MySQL Port (optional): 3306
 ![FichaTécnicaSaborDigital](https://github.com/user-attachments/assets/e3e956e6-5fb7-4640-84dc-45f3076ef876)
 
 0) Retorna identificação da receita da Ficha Técnica:
+![image](https://github.com/user-attachments/assets/264508f5-cde0-44a1-b91a-df18139c00f8)
+
 ```sql
 SELECT 
 	lif.`id_ficha_tecnica`,
