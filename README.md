@@ -1,5 +1,5 @@
 ```
-#CREDENCIAIS ACESSO AO BANCO DE DADOS:
+# CREDENCIAIS ACESSO AO BANCO DE DADOS:
 
 MySQL Hostname: sql106.infinityfree.com
 MySQL Database Name: if0_39000213_sabor_digital
@@ -10,7 +10,7 @@ MySQL Port (optional): 3306
 
 ![FichaTécnicaSaborDigital](https://github.com/user-attachments/assets/e3e956e6-5fb7-4640-84dc-45f3076ef876)
 
-##0) Retorna identificação da receita da Ficha Técnica:
+## 0) Retorna identificação da receita da Ficha Técnica:
 ```sql
 SELECT 
 	lif.`id_ficha_tecnica`,
@@ -28,7 +28,7 @@ WHERE
 ![image](https://github.com/user-attachments/assets/264508f5-cde0-44a1-b91a-df18139c00f8)
 
 
-##1) Consulta ingredientes componentes da receita:
+## 1) Consulta ingredientes componentes da receita:
 ```sql
 SELECT
     i.descricao_ingrediente AS Ingrediente,
@@ -48,7 +48,7 @@ WHERE
 ![image](https://github.com/user-attachments/assets/fc57e95d-09ae-4f53-a1b2-f8d78c9d17c3)
 
 
-##2) Retorna o custo total dos ingredientes componentes da receita (*** Falta Atualizar a Fórmula para simular o PREÇO DE VENDA ***)
+## 2) Retorna o custo total dos ingredientes componentes da receita (*** Falta Atualizar a Fórmula para simular o PREÇO DE VENDA ***)
 ```sql
 SELECT
     SUM(custo_total_item) AS CustoTotalIngredientes
@@ -60,7 +60,7 @@ WHERE
 ![image](https://github.com/user-attachments/assets/a5856100-3077-4041-bd90-c0fb662ad50f)
 
 
-##3) Retorna informações nutricionais da receita (** AINDA APRESENTA INCONSISTÊNCIAS **)
+## 3) Retorna informações nutricionais da receita (** AINDA APRESENTA INCONSISTÊNCIAS **)
 ```sql
 -- Esta consulta funcionará APENAS se as tabelas informacao_nutricional e ingrediente_nutriente
 -- estiverem populadas com dados nutricionais por ingrediente
@@ -88,7 +88,7 @@ GROUP BY
 ```
 ![image](https://github.com/user-attachments/assets/4235089d-cce1-4660-8652-4c30da14dcd0)
 
-##4) Retorna os equipamentos necessários
+## 4) Retorna os equipamentos necessários
 ```sql
 SELECT
     e.descricao AS Equipamento,
@@ -103,7 +103,7 @@ WHERE
 ![image](https://github.com/user-attachments/assets/fec1aaaf-57e3-40ad-9c2c-7406d09e5a60)
 
 
-##5) Retorna modo de preparo
+## 5) Retorna modo de preparo
 ```sql
 SELECT
     sequencia AS Passo,
