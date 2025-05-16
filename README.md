@@ -1,6 +1,5 @@
-```
 # CREDENCIAIS ACESSO AO BANCO DE DADOS:
-
+```
 MySQL Hostname: sql106.infinityfree.com
 MySQL Database Name: if0_39000213_sabor_digital
 MySQL Username: if0_39000213
