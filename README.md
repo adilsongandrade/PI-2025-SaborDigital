@@ -36,7 +36,7 @@ WHERE
 ```
 
 
-2) Retorna o custo total dos ingredientes componentes da receita
+2) Retorna o custo total dos ingredientes componentes da receita (*** Falta Atualizar a Fórmula para simular o PREÇO DE VENDA ***)
 
 ```sql
 SELECT
