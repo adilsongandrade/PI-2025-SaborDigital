@@ -29,6 +29,7 @@ WHERE
 ```
 
 1) Consulta ingredientes componentes da receita:
+![image](https://github.com/user-attachments/assets/fc57e95d-09ae-4f53-a1b2-f8d78c9d17c3)
 
 ```sql
 SELECT
