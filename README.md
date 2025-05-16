@@ -1,3 +1,13 @@
+```
+CREDENCIAIS ACESSO AO BANCO DE DADOS:
+
+MySQL Hostname: sql106.infinityfree.com
+MySQL Database Name: if0_39000213_sabor_digital
+MySQL Username: if0_39000213
+MySQL Password: univesPI2025
+MySQL Port (optional): 3306
+```
+
 ![FichaTécnicaSaborDigital](https://github.com/user-attachments/assets/e3e956e6-5fb7-4640-84dc-45f3076ef876)
 
 0) Retorna identificação da receita da Ficha Técnica:
