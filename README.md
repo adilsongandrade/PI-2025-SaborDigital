@@ -29,6 +29,7 @@ WHERE
 ```
 
 1) Consulta ingredientes componentes da receita:
+
 ![image](https://github.com/user-attachments/assets/fc57e95d-09ae-4f53-a1b2-f8d78c9d17c3)
 
 ```sql
@@ -50,6 +51,8 @@ WHERE
 
 
 2) Retorna o custo total dos ingredientes componentes da receita (*** Falta Atualizar a Fórmula para simular o PREÇO DE VENDA ***)
+
+![image](https://github.com/user-attachments/assets/a5856100-3077-4041-bd90-c0fb662ad50f)
 
 ```sql
 SELECT
