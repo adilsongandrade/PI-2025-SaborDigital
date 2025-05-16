@@ -16,7 +16,9 @@ WHERE
     lif.id_ficha_tecnica = @id_ficha; -- Use a variável @id_ficha ou o ID específico da ficha
 ```
 
-2) Consulta ingredientes componentes da receita:
+1) Consulta ingredientes componentes da receita:
+
+```sql
 SELECT
     i.descricao_ingrediente AS Ingrediente,
     lif.quantidade AS Quantidade,
@@ -31,20 +33,24 @@ JOIN
     unidades_medida um ON lif.id_unidade = um.id_unidade
 WHERE
     lif.id_ficha_tecnica = @id_ficha; -- Use a variável @id_ficha ou o ID específico da ficha
+```
 
 
+2) Retorna o custo total dos ingredientes componentes da receita
 
-3) Retorna o custo total dos ingredientes componentes da receita
+```sql
 SELECT
     SUM(custo_total_item) AS CustoTotalIngredientes
 FROM
     lista_ingredientes_ficha_tecnica
 WHERE
     id_ficha_tecnica = @id_ficha; -- Use a variável @id_ficha ou o ID específico da ficha
+```
 
 
+3) Retorna informações nutricionais da receita (** AINDA APRESENTA INCONSISTÊNCIAS **)
 
-4) Retorna informações nutricionais da receita (** AINDA APRESENTA INCONSISTÊNCIAS **)
+```sql
 -- Esta consulta funcionará APENAS se as tabelas informacao_nutricional e ingrediente_nutriente
 -- estiverem populadas com dados nutricionais por ingrediente
 SELECT
@@ -68,10 +74,11 @@ WHERE
     lif.id_ficha_tecnica = @id_ficha -- Use a variável @id_ficha ou o ID específico da ficha
 GROUP BY
     inf.nome_nutriente, inf.unidade_medida;
+```
 
 
-
-5) Retorna os equipamentos necessários
+4) Retorna os equipamentos necessários
+```sql
 SELECT
     e.descricao AS Equipamento,
     lef.quantidade AS Quantidade
@@ -81,10 +88,11 @@ JOIN
     equipamentos e ON lef.id_equipamento = e.id_equipamento
 WHERE
     lef.id_ficha_tecnica = @id_ficha; -- Use a variável @id_ficha ou o ID específico da ficha
+```
 
+5) Retorna modo de preparo
 
-
-6) Retorna modo de preparo
+```sql
 SELECT
     sequencia AS Passo,
     texto_passo AS Descricao,
@@ -95,3 +103,4 @@ WHERE
     id_ficha_tecnica = @id_ficha -- Use a variável @id_ficha ou o ID específico da ficha
 ORDER BY
     sequencia;
+```
