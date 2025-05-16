@@ -66,6 +66,9 @@ WHERE
 
 3) Retorna informações nutricionais da receita (** AINDA APRESENTA INCONSISTÊNCIAS **)
 
+![image](https://github.com/user-attachments/assets/4235089d-cce1-4660-8652-4c30da14dcd0)
+
+
 ```sql
 -- Esta consulta funcionará APENAS se as tabelas informacao_nutricional e ingrediente_nutriente
 -- estiverem populadas com dados nutricionais por ingrediente
